@@ -162,6 +162,17 @@
     }
   }
 
+  .newsletter-widget {
+    @apply flex flex-col items-center;
+    @apply rounded-lg;
+
+    @apply text-popups-txt text-center;
+    @apply bg-popups-bg;
+    @apply shadow;
+
+    height: 930px;
+  }
+
   .mint-widget {
     @apply flex flex-col items-center;
     @apply rounded-lg;

@@ -263,6 +263,9 @@ export default class Dapp extends React.Component<Props, State> {
               : null}
           </div>
         }
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfeMCNFs7c4yhhCQI9Fh4dp_mVemI1mWZUa5lPR280MXy5dyw/viewform?embedded=true" 
+          className='newsletter-widget'>Loading…</iframe>
       </>
     );
   }
