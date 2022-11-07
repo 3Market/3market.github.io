@@ -20,6 +20,7 @@ contract MonstarsNFT is ERC721AQueryable, Ownable, ReentrancyGuard {
   
   uint256 public cost;
   uint256 public maxSupply;
+  uint256 public maxSupplyUpperBound = 10000;
   uint256 public maxMintAmountPerTx;
 
   bool public paused = true;
@@ -87,6 +88,15 @@ contract MonstarsNFT is ERC721AQueryable, Ownable, ReentrancyGuard {
     return bytes(currentBaseURI).length > 0
         ? string(abi.encodePacked(currentBaseURI, _tokenId.toString(), uriSuffix))
         : '';
+  }
+
+  //This function allows the NFT to grow without having to mint the full amount up front
+  //While also assuring to the holders that the max supply will not exceed the upperbounds
+  function setMaxSuppy(uint256 _maxSupply) public onlyOwner {
+
+    require(_maxSupply > maxSupply, "Max supply can is only allowed to grow");
+    require(_maxSupply < maxSupplyUpperBound, "Max supply can cannot exceed the upperbounds");
+    maxSupply = _maxSupply;
   }
 
   function setRevealed(bool _state) public onlyOwner {
