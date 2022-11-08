@@ -1,5 +1,5 @@
 {
-    "name": "@hashlips-lab/nft-erc721-collection-minting-dapp",
+    "name": "3_market_minting_dapp",
     "version": "0.0.0",
     "private": true,
     "devDependencies": {
