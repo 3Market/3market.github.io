@@ -1,7 +1,8 @@
 {
     "name": "3_market_minting_dapp",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "private": true,
+    "homepage": "./",
     "devDependencies": {
         "@babel/preset-react": "^7.0.0",
         "@metamask/detect-provider": "^1.2.0",
